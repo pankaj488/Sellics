@@ -82,16 +82,18 @@ public class KeywordScoreService {
 	private double calculateScoreWithAmazonData(String keyword, String limit, int slaBreachLimit) {
 		int countOfAPICalls = 0;
 		long occuranceOfKeywordInAllCalls = 0;
-		int substringSize = keyword.length() / slaBreachLimit;
+		int quotient = keyword.length() / slaBreachLimit;
 		for (int i = 0; i < keyword.length(); i++) {
 			String substring = null;
 			if (keyword.length() > slaBreachLimit) {
-				int indexIncreaseBy = (substringSize + 1) * (i + 1);
+				int indexIncreaseBy = (quotient + 1) * (i + 1);
 				substring = keyword.substring(0,
 						(keyword.length() < indexIncreaseBy ? keyword.length() : indexIncreaseBy));
+
 				if (keyword.length() < indexIncreaseBy) {
 					break;
 				}
+
 			} else {
 				substring = keyword.substring(0, (keyword.length() == i ? i : i + 1));
 			}
