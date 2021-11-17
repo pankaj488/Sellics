@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sellics.keyword.score.model.AmazonResponse;
 
+/**
+ * @author Pankaj Singh
+ *
+ */
 @FeignClient(name = "amazon-api", url = "${client.amazon.autocomplete.api}")
 public interface AmazonClient {
 	@GetMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE)

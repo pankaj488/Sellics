@@ -2,6 +2,10 @@ package com.sellics.keyword.score.model;
 
 import java.util.List;
 
+/**
+ * @author Pankaj Singh
+ *
+ */
 public class AmazonResponse {
 
 	private String alias;
@@ -40,9 +44,5 @@ public class AmazonResponse {
 	public void setSuggestions(List<AmazonSuggestions> suggestions) {
 		this.suggestions = suggestions;
 	}
-
-
-	
-	
 
 }

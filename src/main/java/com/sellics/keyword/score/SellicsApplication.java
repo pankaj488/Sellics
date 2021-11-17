@@ -10,6 +10,10 @@ import com.sellics.keyword.score.amazon.client.AmazonClient;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * @author Pankaj Singh
+ *
+ */
 @SpringBootApplication
 @EnableFeignClients(clients = AmazonClient.class)
 @EnableSwagger2

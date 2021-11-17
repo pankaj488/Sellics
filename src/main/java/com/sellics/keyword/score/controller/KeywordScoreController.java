@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sellics.keyword.score.model.KeywordScore;
 import com.sellics.keyword.score.service.KeywordScoreService;
 
+/**
+ * @author Pankaj Singh
+ *
+ */
 @RestController
 @RequestMapping("/estimate")
 public class KeywordScoreController {
